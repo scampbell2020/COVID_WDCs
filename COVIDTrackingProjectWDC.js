@@ -8,8 +8,8 @@ var cols = [
 { id : "positiveTestsViral",alias: "Positive Viral Tests", dataType : tableau.dataTypeEnum.string }
 ];
 var tableInfo = {
-id : "taxi",
-alias : "TLC Trip Data",
+id : "COVID",
+alias : "COVID Tracking Project Data",
 columns : cols
 };
 schemaCallback([tableInfo]);
@@ -34,7 +34,7 @@ doneCallback();
 tableau.registerConnector(myConnector);
 $(document).ready(function () {
 $("#submitButton").click(function () {
-tableau.connectionName = "taxi";
+tableau.connectionName = "COVID";
 tableau.submit();
 });
 });})();
