@@ -3,7 +3,7 @@ var myConnector = tableau.makeConnector();
 myConnector.getSchema = function (schemaCallback) {
 var cols = [
 { id : "date", alias:"Date", dataType : tableau.dataTypeEnum.string },
-{ id : "state", alias: "State Abbreviation",dataType : tableau.dataTypeEnum.string },
+{ id : "states", alias: "State",dataType : tableau.dataTypeEnum.string },
 { id : "totalTestsViral",alias: "Total Viral Tests", dataType : tableau.dataTypeEnum.string },
 { id : "positiveTestsViral",alias: "Positive Viral Tests", dataType : tableau.dataTypeEnum.string }
 ];
@@ -22,7 +22,7 @@ tableData = [];
 for (var i = 0, len = feat.length; i < len; i++) {
 tableData.push({
 "date": feat[i]["Date"],
-"state": feat[i]["State Abbreviation"],
+"states": feat[i]["State"],
 "totalTestsViral": feat[i] ["Total Viral Tests"],
 "positiveTestsViral": feat[i] ["Positive Viral Tests"]
 });
