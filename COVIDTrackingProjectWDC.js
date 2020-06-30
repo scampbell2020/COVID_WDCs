@@ -21,7 +21,7 @@ tableData = [];
 // Iterate over the JSON object
 for (var i = 0, len = feat.length; i < len; i++) {
 tableData.push({
-"date": feat[i]["Month"]["Year"],
+"date": feat[i]["Date"],
 "state": feat[i]["State Abbreviation"],
 "totalTestsViral": feat[i] ["Total Viral Tests"],
 "positiveTestsViral": feat[i] ["Positive Viral Tests"]
