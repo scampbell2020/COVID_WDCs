@@ -2,10 +2,10 @@
 var myConnector = tableau.makeConnector();
 myConnector.getSchema = function (schemaCallback) {
 var cols = [
-{ id : "date", alias:"Date", dataType : tableau.dataTypeEnum.string },
+{ id : "date", alias:"Date", dataType : tableau.dataTypeEnum.date },
 { id : "state", alias: "State Abbreviation",dataType : tableau.dataTypeEnum.string },
-{ id : "totalTestsViral",alias: "Total Viral Tests", dataType : tableau.dataTypeEnum.string },
-{ id : "positiveTestsViral",alias: "Positive Viral Tests", dataType : tableau.dataTypeEnum.string }
+{ id : "totalTestsViral",alias: "Total Viral Tests", dataType : tableau.dataTypeEnum.int },
+{ id : "positiveTestsViral",alias: "Positive Viral Tests", dataType : tableau.dataTypeEnum.int }
 ];
 var tableInfo = {
 id : "COVID",
@@ -21,10 +21,10 @@ tableData = [];
 // Iterate over the JSON object
 for (var i = 0, len = feat.length; i < len; i++) {
 tableData.push({
-"date": feat[i]["Date"],
-"state": feat[i]["State Abbreviation"],
-"totalTestsViral": feat[i] ["Total Viral Tests"],
-"positiveTestsViral": feat[i] ["Positive Viral Tests"]
+"date": feat[i].date,
+"state": feat[i].state,
+"totalTestsViral": feat[i].totalTestsViral,
+"positiveTestsViral": feat[i].positiveTestsViral
 });
 }
 table.appendRows(tableData);
