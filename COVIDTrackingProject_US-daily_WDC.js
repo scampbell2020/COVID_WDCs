@@ -30,13 +30,13 @@ var cols = [
 ];
 var tableInfo = {
 id : "COVID",
-alias : "COVID Tracking Project Data",
+alias : "COVID Tracking Project Data - US Daily",
 columns : cols
 };
 schemaCallback([tableInfo]);
 };
 myConnector.getData = function(table, doneCallback) {
-$.getJSON("https://covidtracking.com/api/v1/states/daily.json", function(resp) {
+$.getJSON("https://covidtracking.com/api/v1/US/daily.json", function(resp) {
 var feat = resp;
 tableData = [];
 // Iterate over the JSON object
@@ -76,7 +76,7 @@ doneCallback();
 tableau.registerConnector(myConnector);
 $(document).ready(function () {
 $("#submitButton").click(function () {
-tableau.connectionName = "COVID";
+tableau.connectionName = "COVID Tracking Project - US Daily";
 tableau.submit();
 });
 });})();
