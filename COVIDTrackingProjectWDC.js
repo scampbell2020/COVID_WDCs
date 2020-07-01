@@ -2,7 +2,7 @@
 var myConnector = tableau.makeConnector();
 myConnector.getSchema = function (schemaCallback) {
 var cols = [
-{ id : "date", alias:"Date", dataType : tableau.dataTypeEnum.string },
+{ id : "date", alias:"Date", dataType : tableau.dataTypeEnum.int },
 { id : "state", alias: "State Abbreviation",dataType : tableau.dataTypeEnum.string },
 { id : "totalTestsViral",alias: "Total Viral Tests", dataType : tableau.dataTypeEnum.int },
 { id : "positiveTestsViral",alias: "Positive Viral Tests", dataType : tableau.dataTypeEnum.int }
