@@ -36,7 +36,7 @@ columns : cols
 schemaCallback([tableInfo]);
 };
 myConnector.getData = function(table, doneCallback) {
-$.getJSON("https://covidtracking.com/api/v1/US/daily.json", function(resp) {
+$.getJSON("https://covidtracking.com/api/v1/us/daily.json", function(resp) {
 var feat = resp;
 tableData = [];
 // Iterate over the JSON object
