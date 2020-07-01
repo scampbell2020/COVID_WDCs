@@ -16,7 +16,7 @@ schemaCallback([tableInfo]);
 };
 myConnector.getData = function(table, doneCallback) {
 $.getJSON("https://covidtracking.com/api/v1/states/daily.json", function(resp) {
-var feat = resp;
+var feat = resp.array;
 tableData = [];
 // Iterate over the JSON object
 for (var i = 0, len = feat.length; i < len; i++) {
