@@ -7,3 +7,6 @@ Below, find the data source and corresponding files:
   2. https://covidtracking.com/api/v1/us/daily.csv   
     A. COVIDTrackingProject_US-daily_WDC.html
     </br> B. COVIDTrackingProject_US-daily_WDC.js
+
+
+Please refer to https://covidtracking.com/data/download for information on fields, field deprecation, and other information.
